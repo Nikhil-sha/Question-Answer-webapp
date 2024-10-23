@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Question and Answer App</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-100">
+
+	<header class="sticky top-0 w-full flex flex-row justify-between items-center bg-white shadow-md p-4 rounded">
+		<h1 class="text-2xl font-bold text-gray-800">Question and Answer App</h1>
+		<div class="flex space-x-2">
+			<button id="save-btn" class="bg-blue-500 hover:bg-blue-600 p-2 text-white rounded transition duration-200 flex items-center">
+				<span class="text-sm font-semibold">save</span> <!-- Save icon -->
+			</button>
+			<button id="print-btn" class="bg-green-500 hover:bg-green-600 p-2 text-white rounded transition duration-200 flex items-center">
+				<span class="text-sm font-semibold">download</span> <!-- Download icon -->
+			</button>
+		</div>
+	</header>
+
+	<div class="container mx-auto p-8">
+
+		<div id="google_translate_element" class="bg-white shadow-md rounded-lg p-6"></div>
+
+		<script type="text/javascript">
+			function googleTranslateElementInit() {
+				new google.translate.TranslateElement({
+					pageLanguage: 'en',
+					includedLanguages: 'en,hi,bh', // Add languages you want to support
+					layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
+					autoDisplay: false
+				}, 'google_translate_element');
+			}
+		</script>
+
+		<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+	</div>
+
+	<div class="container mx-auto p-8">
+		<div id="question-container" class="bg-white shadow-md rounded-lg p-6">
+			<!-- Questions will be loaded here dynamically -->
+		</div>
+	</div>
+
+	<script defer src="main.js"></script>
+
+</body>
+
+</html>
